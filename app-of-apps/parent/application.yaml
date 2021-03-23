@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application          
+metadata:
+  name: app-of-apps-parent
+spec:
+  destination:
+    name: in-cluster
+    namespace: openshift-gitops
+  source:
+    path: app-of-apps/child
+    repoURL: https://github.com/jannfis/openshift-test-apps
+  syncPolicy:
+    automated:
+      prune: true
