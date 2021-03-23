@@ -6,6 +6,7 @@ spec:
   destination:
     name: in-cluster
     namespace: openshift-gitops
+  project: default
   source:
     path: app-of-apps/guestbook
     repoURL: https://github.com/jannfis/openshift-test-apps
